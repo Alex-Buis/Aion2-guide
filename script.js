@@ -132,7 +132,7 @@ tick(); setInterval(tick, 1000);
 
 // ===== Zoom sur les captures =====
 const lb = document.getElementById('lightbox');
-document.querySelectorAll('.shot, .rarity img, .shot-fig img').forEach(img =>
+document.querySelectorAll('.shot, .rarity img, .shot-fig img, .stuff-ref img').forEach(img =>
   img.addEventListener('click', () => { lb.querySelector('img').src = img.src; lb.hidden = false; }));
 lb.addEventListener('click', () => lb.hidden = true);
 

@@ -165,3 +165,27 @@ footer{text-align:center;color:var(--dim);padding:32px;font-size:.85rem}
 .tab.active{background:var(--gold);color:#1a1405;border-color:var(--gold)}
 .priority.tabpanel{display:none}
 .priority.tabpanel.active{display:grid}
+
+/* ===== Fil rouge ===== */
+.timeline{list-style:none;margin:24px 0 0;padding:0 0 0 34px;position:relative}
+.timeline::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:3px;border-radius:3px;background:linear-gradient(180deg,var(--rare),var(--epic) 45%,var(--gold) 80%,var(--accent))}
+.stage{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:18px}
+.stage::before{content:"";position:absolute;left:-30px;top:22px;width:15px;height:15px;border-radius:50%;background:var(--bg);border:3px solid var(--gold)}
+.stage.goal{border-color:var(--gold);box-shadow:0 0 24px #f2c14e22}
+.stage.goal::before{background:var(--gold)}
+.stage.after{opacity:.85}
+.stage.after::before{border-color:var(--accent)}
+.stage-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.stage-head h3{margin:0;font-size:1.15rem}
+.stage-tag{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#1a1405;background:var(--gold);padding:3px 10px;border-radius:99px}
+.stage.after .stage-tag{background:var(--accent)}
+.stage .bullets{margin:12px 0 0}
+.stage a{color:var(--accent)}
+.loot{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:14px}
+.loot-title{font-size:.78rem;color:var(--dim);text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
+.chip{font-size:.85rem;padding:5px 10px;border-radius:8px;border:1px solid var(--line);background:var(--panel2)}
+.chip.gold{border-color:var(--gold2);color:var(--gold)}
+.chip.epic{border-color:#3d8bff66;color:#8cb8ff}
+.stuff-ref{display:flex;gap:16px;align-items:flex-start;margin:16px 0 0}
+.stuff-ref img{width:120px;border-radius:8px;border:1px solid var(--line);cursor:zoom-in;flex-shrink:0}
+.stuff-ref figcaption{color:var(--dim);font-size:.9rem}
