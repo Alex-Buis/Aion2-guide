@@ -13,11 +13,11 @@ strong{color:#fff}
   background:
     linear-gradient(90deg,var(--bg) 0%,#0d0f14e6 35%,#0d0f1466 65%,#0d0f1422 100%),
     linear-gradient(0deg,var(--bg) 0%,transparent 35%),
-    url("hero-bg.jpg") right 20% / cover no-repeat;}
+    url("hero-bg.webp") right 20% / cover no-repeat;}
 @media (max-width:640px){
   .hero{background:
     linear-gradient(0deg,var(--bg) 10%,#0d0f14d9 60%,#0d0f1499 100%),
-    url("hero-bg.jpg") 70% 20% / cover no-repeat;}
+    url("hero-bg.webp") 70% 20% / cover no-repeat;}
 }
 .hero-inner{max-width:960px;margin:auto}
 .eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.15em;font-size:.8rem;margin:0}
@@ -114,3 +114,46 @@ footer{text-align:center;color:var(--dim);padding:32px;font-size:.85rem}
 .to-top{position:fixed;right:20px;bottom:20px;z-index:10;width:48px;height:48px;border-radius:50%;border:none;background:var(--gold);color:#1a1405;font-size:1.4rem;font-weight:800;cursor:pointer;box-shadow:0 6px 20px #0008;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .2s,transform .2s}
 .to-top.show{opacity:1;pointer-events:auto;transform:none}
 .to-top:hover{background:#ffd56b}
+
+/* ===== Ajouts v2 ===== */
+.updated{color:var(--dim);letter-spacing:.05em;text-transform:none}
+
+.gs-tracker{margin-top:28px;max-width:480px}
+.gs-tracker label{display:block;font-size:.85rem;color:var(--dim);margin-bottom:6px}
+.gs-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+#gs-input{width:110px;background:var(--panel);border:1px solid var(--line);color:var(--gold);font:700 1.2rem Inter;padding:8px 12px;border-radius:8px}
+#gs-input:focus{outline:2px solid var(--gold);outline-offset:1px}
+.gs-left{font-size:.9rem;color:var(--dim)}
+.gs-left.ok{color:var(--rare);font-weight:700}
+.gs-bar{position:relative;height:10px;background:var(--panel2);border-radius:99px;margin:14px 0 26px}
+#gs-fill{height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#3d8bff,var(--gold));transition:width .3s}
+.gs-mark{position:absolute;top:14px;transform:translateX(-50%);font-size:.72rem;color:var(--dim)}
+.gs-mark:first-of-type{transform:none}
+.gs-mark.end{transform:translateX(-100%);color:var(--gold)}
+.gs-mark::before{content:"";position:absolute;top:-16px;left:50%;width:1px;height:12px;background:#ffffff33}
+
+.priority{counter-reset:p;list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
+.priority li{counter-increment:p;position:relative;padding:14px 16px 14px 60px;background:var(--panel);border:1px solid var(--line);border-radius:12px;color:var(--dim)}
+.priority li::before{content:counter(p);position:absolute;left:16px;top:50%;transform:translateY(-50%);width:30px;height:30px;display:grid;place-items:center;border-radius:50%;background:var(--panel2);color:var(--gold);font:700 .95rem Cinzel,serif;border:1px solid var(--gold2)}
+.priority li:first-child{border-color:var(--gold2);background:linear-gradient(90deg,#2a2416,var(--panel))}
+.priority a{color:var(--accent);margin-left:6px;font-size:.85rem;white-space:nowrap}
+
+.errors{display:grid;gap:8px;margin-top:16px}
+.error{display:flex;gap:12px;align-items:flex-start;background:#ff5d5d0d;border:1px solid #ff5d5d33;border-radius:10px;padding:12px 14px}
+.error span{color:var(--red);font-weight:800}
+.error p{margin:0;color:var(--dim)}
+
+.checklists.three{grid-template-columns:1fr 1fr 1.3fr}
+.reset-in{color:var(--dim);font:500 .75rem Inter;text-transform:none;letter-spacing:0}
+.progress-wrap.inline{margin:0 0 12px}
+
+.notif-btn{margin-top:10px;background:var(--panel2);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:8px;cursor:pointer;font:600 .85rem Inter}
+.notif-btn.on{border-color:var(--rare);color:var(--rare)}
+.notif-hint{margin:6px 0 0;font-size:.78rem;color:var(--dim);min-height:1em}
+
+.glossary{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:18px 0 0}
+.glossary div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.glossary dt{font-weight:700;color:var(--gold)}
+.glossary dd{margin:4px 0 0;color:var(--dim);font-size:.92rem}
+
+@media (max-width:900px){.checklists.three{grid-template-columns:1fr}}
