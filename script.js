@@ -147,3 +147,14 @@ document.querySelectorAll('section').forEach(s => obs.observe(s));
 const toTop = document.getElementById('to-top');
 window.addEventListener('scroll', () => toTop.classList.toggle('show', window.scrollY > 500), { passive: true });
 toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// ===== Onglets 1h de jeu : avant / après 1000 GS =====
+const tabs = [...document.querySelectorAll('.tab')];
+function showTab(name) {
+  tabs.forEach(t => { t.classList.toggle('active', t.dataset.tab === name); t.setAttribute('aria-selected', t.dataset.tab === name); });
+  document.querySelectorAll('.tabpanel').forEach(p => p.classList.toggle('active', p.dataset.panel === name));
+}
+tabs.forEach(t => t.addEventListener('click', () => { store.tab = t.dataset.tab; save(); showTab(t.dataset.tab); }));
+// Onglet par défaut : choix enregistré, sinon selon le GS saisi
+const savedGs = parseInt(store.gs, 10);
+showTab(store.tab || (savedGs && savedGs < 1000 ? 'avant' : 'apres'));

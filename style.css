@@ -157,3 +157,11 @@ footer{text-align:center;color:var(--dim);padding:32px;font-size:.85rem}
 .glossary dd{margin:4px 0 0;color:var(--dim);font-size:.92rem}
 
 @media (max-width:900px){.checklists.three{grid-template-columns:1fr}}
+
+/* Onglets avant / après 1000 GS */
+.tabs{display:flex;gap:8px;margin:16px 0 4px;flex-wrap:wrap}
+.tab{background:var(--panel);color:var(--dim);border:1px solid var(--line);padding:8px 18px;border-radius:99px;cursor:pointer;font:600 .95rem Inter}
+.tab:hover{color:var(--text)}
+.tab.active{background:var(--gold);color:#1a1405;border-color:var(--gold)}
+.priority.tabpanel{display:none}
+.priority.tabpanel.active{display:grid}

@@ -67,7 +67,17 @@
 <!-- Priorités -->
 <section id="priorites">
   <h2><span class="num">★</span> Tu as 1h de jeu ? Fais ça dans l'ordre</h2>
-  <ol class="priority">
+  <div class="tabs" role="tablist">
+    <button class="tab" data-tab="avant" role="tab">Avant 1000 GS</button>
+    <button class="tab" data-tab="apres" role="tab">Après 1000 GS</button>
+  </div>
+  <ol class="priority tabpanel" data-panel="avant">
+    <li><strong>Quêtes principales</strong> : Pierres d'amélioration. <a href="#base">Voir</a></li>
+    <li><strong>Quêtes secondaires</strong> : Skill points + Pierres d'amélioration. <a href="#base">Voir</a></li>
+    <li><strong>Donjons scellés</strong> : Daevanions + Skill points + Pierres d'amélioration. <a href="#base">Voir</a></li>
+    <li><strong>Plumes</strong> : monter le Monolith jusqu'au niveau 30. <a href="#base">Voir</a></li>
+  </ol>
+  <ol class="priority tabpanel" data-panel="apres">
     <li><strong>Un rift est en cours ou arrive ?</strong> Riftspace → donjons scellés Elyos. C'est la plus grosse source de pierres. <a href="#pierres">Voir</a></li>
     <li><strong>Daily dungeons de la semaine</strong> pas encore faits : buff-toi et clean tous les mobs. <a href="#pierres">Voir</a></li>
     <li><strong>Quêtes et donjons scellés Asmo</strong> restants : Skill points + Daevanions. <a href="#base">Voir</a></li>
