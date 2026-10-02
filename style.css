@@ -29,7 +29,7 @@ h1{font-size:clamp(2rem,6vw,3.4rem);margin:.2em 0}
 .progress-wrap{margin-top:28px;max-width:480px}
 .progress-label{display:flex;justify-content:space-between;font-size:.85rem;color:var(--dim);margin-bottom:6px}
 .progress{height:10px;background:var(--panel2);border-radius:99px;overflow:hidden}
-#progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--gold2),var(--gold));transition:width .3s}
+.progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--gold2),var(--gold));transition:width .3s}
 
 .toc{position:sticky;top:0;z-index:5;display:flex;gap:4px;overflow-x:auto;padding:10px 16px;background:#0d0f14e6;backdrop-filter:blur(8px);border-bottom:1px solid var(--line);justify-content:center}
 .toc a{color:var(--dim);text-decoration:none;padding:6px 12px;border-radius:8px;white-space:nowrap;font-size:.9rem}
