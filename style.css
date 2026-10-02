@@ -207,3 +207,11 @@ footer{text-align:center;color:var(--dim);padding:32px;font-size:.85rem}
 .transmuter img{width:214px;max-width:100%}
 .transmuter p{margin:0;flex:1;min-width:220px;color:var(--dim)}
 kbd{display:inline-block;font:700 .8rem Inter;color:var(--text);background:var(--panel2);border:1px solid var(--line);border-bottom-width:3px;border-radius:6px;padding:1px 7px}
+
+/* Langue dans le menu fixe */
+.toc{align-items:center}
+.lang-switch.in-nav{position:static;margin-left:12px;flex-shrink:0;background:var(--panel);backdrop-filter:none}
+.lang-switch.in-nav .lang-btn{padding:4px 10px;font-size:.75rem}
+@media (max-width:640px){
+  .lang-switch.in-nav{order:-1;margin:0 8px 0 0}
+}
