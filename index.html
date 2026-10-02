@@ -17,8 +17,8 @@
     <p class="lead">Tout faire pour passer 1400 de GS <strong>avant d'utiliser ses Odyles</strong>, coûte que coûte.</p>
     <div class="alert">⚠ Le vrai goulot d'étranglement : les <strong>Pierres d'amélioration</strong>.</div>
     <div class="progress-wrap">
-      <div class="progress-label"><span>Progression checklist</span><span id="progress-text">0 / 0</span></div>
-      <div class="progress"><div id="progress-bar"></div></div>
+      <div class="progress-label"><span>Progression checklist</span><span class="progress-text">0 / 0</span></div>
+      <div class="progress"><div class="progress-bar"></div></div>
     </div>
   </div>
 </header>
@@ -71,21 +71,24 @@
   <h2><span class="num">2</span> Palier 1051 → 1400 GS</h2>
 
   <h3 class="h3">Code couleur des objets</h3>
-  <div class="tabs" role="tablist">
-    <button class="tab active" data-tab="amulette">Amulette</button>
-    <button class="tab" data-tab="ceinture">Ceinture</button>
-  </div>
-  <div class="rarity tabpanel active" data-panel="amulette">
+  <p class="row-label">Amulette</p>
+  <div class="rarity">
     <figure class="r-rare"><img src="amulette-rare.png" alt="Amulette Rare"><figcaption>Vert · Rare</figcaption></figure>
     <figure class="r-epic"><img src="amulette-epique.png" alt="Amulette Épique"><figcaption>Bleu · Épique</figcaption></figure>
     <figure class="r-unique"><img src="amulette-unique.png" alt="Amulette Unique"><figcaption>Jaune · Unique (« Gold ») ✔ cible</figcaption></figure>
   </div>
-  <div class="rarity tabpanel" data-panel="ceinture">
+  <p class="row-label">Ceinture</p>
+  <div class="rarity">
     <figure class="r-rare"><img src="ceinture-rare.png" alt="Ceinture Rare"><figcaption>Vert · Rare</figcaption></figure>
     <figure class="r-epic"><img src="ceinture-epique.png" alt="Ceinture Épique"><figcaption>Bleu · Épique</figcaption></figure>
     <figure class="r-unique"><img src="ceinture-unique.png" alt="Ceinture Unique"><figcaption>Jaune · Unique (« Gold ») ✔ cible</figcaption></figure>
   </div>
-  <p class="note">Une ceinture Unique +0 (niv. 65) vaut largement plus qu'une Rare +8 (niv. 13). Inutile de monter une pièce verte.</p>
+  <div class="upgrade-path">
+    <span class="step s-rare">Vert</span><span class="arrow">+10 →</span>
+    <span class="step s-epic">Bleu</span><span class="arrow">+10 →</span>
+    <span class="step s-unique">Jaune (Gold)</span>
+  </div>
+  <p class="note">Monter la pièce verte à <strong>+10</strong> pour la passer en bleue, puis la bleue à <strong>+10</strong> pour la passer en jaune (Gold).</p>
 
   <h3 class="h3">Cibles d'amélioration</h3>
   <div class="targets">
@@ -191,6 +194,10 @@
 <!-- 6 -->
 <section id="routine">
   <h2><span class="num">6</span> Routine &amp; checklist</h2>
+  <div class="progress-wrap">
+    <div class="progress-label"><span>Progression checklist</span><span class="progress-text">0 / 0</span></div>
+    <div class="progress"><div class="progress-bar"></div></div>
+  </div>
   <div class="checklists">
     <div>
       <h3 class="h3">Fin de session</h3>

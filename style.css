@@ -9,7 +9,16 @@ body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-
 img{max-width:100%;display:block}
 strong{color:#fff}
 
-.hero{background:radial-gradient(ellipse at top,#2a2416 0%,var(--bg) 70%);padding:64px 16px 40px;border-bottom:1px solid var(--line)}
+.hero{position:relative;padding:96px 16px 64px;border-bottom:1px solid var(--line);
+  background:
+    linear-gradient(90deg,var(--bg) 0%,#0d0f14e6 35%,#0d0f1466 65%,#0d0f1422 100%),
+    linear-gradient(0deg,var(--bg) 0%,transparent 35%),
+    url("hero-bg.jpg") right 20% / cover no-repeat;}
+@media (max-width:640px){
+  .hero{background:
+    linear-gradient(0deg,var(--bg) 10%,#0d0f14d9 60%,#0d0f1499 100%),
+    url("hero-bg.jpg") 70% 20% / cover no-repeat;}
+}
 .hero-inner{max-width:960px;margin:auto}
 .eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.15em;font-size:.8rem;margin:0}
 h1,h2{font-family:Cinzel,serif}
@@ -46,12 +55,15 @@ h2{font-size:1.7rem;display:flex;align-items:center;gap:12px;margin:0 0 6px}
 .bullets{padding-left:20px;color:var(--dim)}
 .bullets li{margin:4px 0}
 
-.tabs{display:flex;gap:8px;margin-bottom:14px}
-.tab{background:var(--panel);color:var(--dim);border:1px solid var(--line);padding:8px 18px;border-radius:99px;cursor:pointer;font:600 .95rem Inter}
-.tab.active{background:var(--gold);color:#1a1405;border-color:var(--gold)}
-.tabpanel{display:none}
-.tabpanel.active{display:grid}
-.rarity{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.row-label{margin:18px 0 8px;font-weight:700;color:var(--text)}
+.rarity{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.upgrade-path{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:22px 0 10px}
+.step{padding:6px 14px;border-radius:99px;font-weight:700;font-size:.9rem}
+.s-rare{background:#3fbf5f22;color:var(--rare);border:1px solid var(--rare)}
+.s-epic{background:#3d8bff22;color:var(--epic);border:1px solid var(--epic)}
+.s-unique{background:var(--gold);color:#1a1405}
+.arrow{color:var(--dim);font-weight:700}
+section .progress-wrap{margin:8px 0 24px}
 .rarity figure{margin:0;background:var(--panel);border-radius:12px;padding:10px;border:2px solid var(--line)}
 .rarity img{border-radius:8px;cursor:zoom-in}
 .rarity figcaption{margin-top:8px;font-weight:600;font-size:.9rem}

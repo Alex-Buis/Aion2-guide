@@ -1,12 +1,3 @@
-// Onglets Amulette / Ceinture
-document.querySelectorAll('.tab').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab').forEach(b => b.classList.toggle('active', b === btn));
-    document.querySelectorAll('.tabpanel').forEach(p =>
-      p.classList.toggle('active', p.dataset.panel === btn.dataset.tab));
-  });
-});
-
 // Checklist sauvegardée dans le navigateur
 const KEY = 'aion2-guide-checklist';
 const load = () => { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch { return {}; } };
@@ -25,8 +16,8 @@ items.forEach((li, i) => {
 });
 function updateProgress() {
   const done = items.filter(li => li.classList.contains('done')).length;
-  document.getElementById('progress-text').textContent = `${done} / ${items.length}`;
-  document.getElementById('progress-bar').style.width = (done / items.length * 100) + '%';
+  document.querySelectorAll('.progress-text').forEach(el => el.textContent = `${done} / ${items.length}`);
+  document.querySelectorAll('.progress-bar').forEach(el => el.style.width = (done / items.length * 100) + '%');
 }
 document.getElementById('reset').addEventListener('click', () => {
   state = {}; save(state);
