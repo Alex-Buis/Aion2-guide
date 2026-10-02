@@ -195,3 +195,15 @@ footer{text-align:center;color:var(--dim);padding:32px;font-size:.85rem}
 .items figure{margin:0}
 .items img{width:100%;border-radius:8px;border:1px solid var(--line);cursor:zoom-in}
 .items figcaption{font-size:.8rem;color:var(--dim);margin-top:6px}
+
+/* Choix de langue */
+.lang-switch{position:absolute;top:16px;right:16px;z-index:3;display:flex;gap:2px;padding:3px;background:#0d0f14cc;border:1px solid var(--line);border-radius:99px;backdrop-filter:blur(6px)}
+.lang-btn{background:none;border:none;color:var(--dim);font:700 .8rem Inter;padding:6px 12px;border-radius:99px;cursor:pointer}
+.lang-btn:hover{color:var(--text)}
+.lang-btn.active{background:var(--gold);color:#1a1405}
+
+/* Transmuter */
+.transmuter{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.transmuter img{width:214px;max-width:100%}
+.transmuter p{margin:0;flex:1;min-width:220px;color:var(--dim)}
+kbd{display:inline-block;font:700 .8rem Inter;color:var(--text);background:var(--panel2);border:1px solid var(--line);border-bottom-width:3px;border-radius:6px;padding:1px 7px}

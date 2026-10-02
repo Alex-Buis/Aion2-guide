@@ -11,6 +11,13 @@ const save = () => { try { localStorage.setItem(KEY, JSON.stringify(store)); } c
 let store = load();
 store.checks ??= {}; store.resets ??= {};
 
+// ===== Langue (FR / EN / ES) =====
+const i18nEls = [...document.querySelectorAll('[data-i18n]')];
+const FR = {}; i18nEls.forEach(el => FR[el.dataset.i18n] = el.innerHTML);
+let lang = store.lang || (navigator.language || 'fr').slice(0, 2);
+if (!['fr', 'en', 'es'].includes(lang)) lang = 'fr';
+let T = UI[lang];
+
 // ===== Reset quotidien / hebdo =====
 function lastDailyReset(now = new Date()) {
   const r = new Date(now); r.setHours(RESET_HOUR, 0, 0, 0);
@@ -73,10 +80,10 @@ const gsInput = document.getElementById('gs-input');
 function updateGs() {
   const gs = parseInt(gsInput.value, 10);
   const fill = document.getElementById('gs-fill'), left = document.getElementById('gs-left');
-  if (isNaN(gs)) { fill.style.width = '0'; left.textContent = "Entre ton GS pour voir ce qu'il reste"; return; }
+  if (isNaN(gs)) { fill.style.width = '0'; left.textContent = T.gsEmpty; return; }
   const pct = Math.max(0, Math.min(100, (gs - GS_START) / (GS_GOAL - GS_START) * 100));
   fill.style.width = pct + '%';
-  left.textContent = gs >= GS_GOAL ? '✔ Objectif atteint : Odyles autorisées !' : `Encore ${GS_GOAL - gs} GS avant 1400`;
+  left.textContent = gs >= GS_GOAL ? T.gsOk : T.gsLeft(GS_GOAL - gs);
   left.classList.toggle('ok', gs >= GS_GOAL);
 }
 if (store.gs) gsInput.value = store.gs;
@@ -97,35 +104,35 @@ const fmt = ms => {
 };
 const fmtLong = ms => {
   const d = Math.floor(ms / 8.64e7), h = Math.floor(ms / 3.6e6) % 24;
-  return d ? `${d}j ${h}h` : `${h}h ${String(Math.floor(ms / 6e4) % 60).padStart(2, '0')}m`;
+  return d ? `${d}${T.d} ${h}h` : `${h}h ${String(Math.floor(ms / 6e4) % 60).padStart(2, '0')}m`;
 };
 
 const notifBtn = document.getElementById('notif-btn'), notifHint = document.getElementById('notif-hint');
 let notifOn = store.notif && 'Notification' in window && Notification.permission === 'granted';
 let notifiedFor = 0;
 function renderNotif() {
-  notifBtn.textContent = notifOn ? '🔔 Alerte activée (cliquer pour couper)' : '🔔 Me prévenir 5 min avant';
+  notifBtn.textContent = notifOn ? T.notifOn : T.notifOff;
   notifBtn.classList.toggle('on', notifOn);
-  notifHint.textContent = notifOn ? 'Fonctionne tant que cette page reste ouverte.' : '';
+  notifHint.textContent = notifOn ? T.notifHint : '';
 }
 notifBtn.addEventListener('click', async () => {
-  if (!('Notification' in window)) { notifHint.textContent = 'Ton navigateur ne gère pas les notifications.'; return; }
+  if (!('Notification' in window)) { notifHint.textContent = T.notifNo; return; }
   if (notifOn) { notifOn = false; store.notif = false; save(); renderNotif(); return; }
   const perm = await Notification.requestPermission();
-  if (perm !== 'granted') { notifHint.textContent = 'Notifications refusées dans le navigateur.'; return; }
+  if (perm !== 'granted') { notifHint.textContent = T.notifDenied; return; }
   notifOn = true; store.notif = true; save(); renderNotif();
 });
 renderNotif();
 
 function tick() {
   const t = nextRift(), diff = t - new Date();
-  document.getElementById('rift-next').textContent = t.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
-  document.getElementById('rift-in').textContent = 'dans ' + fmt(diff);
+  document.getElementById('rift-next').textContent = t.toLocaleTimeString(T.locale, { hour: '2-digit', minute: '2-digit' });
+  document.getElementById('rift-in').textContent = T.in + ' ' + fmt(diff);
   if (notifOn && diff <= 5 * 6e4 && notifiedFor !== t.getTime()) {
     notifiedFor = t.getTime();
-    new Notification('Rift dans 5 minutes', { body: 'Riftspace → donjons scellés Elyos', icon: 'og-image.jpg' });
+    new Notification(T.notifTitle, { body: T.notifBody, icon: 'og-image.jpg' });
   }
-  document.querySelectorAll('.reset-in').forEach(el => el.textContent = '· reset dans ' + fmtLong(nextReset(el.dataset.for) - new Date()));
+  document.querySelectorAll('.reset-in').forEach(el => el.textContent = T.resetIn + ' ' + fmtLong(nextReset(el.dataset.for) - new Date()));
   applyAutoResets(); updateProgress();
 }
 tick(); setInterval(tick, 1000);
@@ -158,3 +165,18 @@ tabs.forEach(t => t.addEventListener('click', () => { store.tab = t.dataset.tab;
 // Onglet par défaut : choix enregistré, sinon selon le GS saisi
 const savedGs = parseInt(store.gs, 10);
 showTab(store.tab || (savedGs && savedGs < 1000 ? 'avant' : 'apres'));
+
+// ===== Changement de langue =====
+function setLang(l) {
+  lang = l; T = UI[l]; store.lang = l; save();
+  const dict = l === 'fr' ? FR : I18N[l];
+  i18nEls.forEach(el => { const v = dict[el.dataset.i18n]; if (v !== undefined) el.innerHTML = v; });
+  document.documentElement.lang = l;
+  document.title = T.title;
+  gsInput.placeholder = T.ph;
+  toTop.setAttribute('aria-label', T.top);
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+  updateGs(); renderNotif(); tick();
+}
+document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+setLang(lang);

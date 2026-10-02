@@ -1,412 +1,393 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Aion 2 — Guide de progression</title>
-<meta name="description" content="Guide de progression Aion 2 : tout faire pour passer 1400 GS avant d'utiliser ses Odyles.">
-
+<meta content="Guide de progression Aion 2 : tout faire pour passer 1400 GS avant d'utiliser ses Odyles." name="description"/>
 <!-- Aperçu du lien (Discord, réseaux) -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Aion 2 — Guide de progression (objectif 1400 GS)">
-<meta property="og:description" content="Pierres d'amélioration, rifts, Daevanions, checklist : la route vers 1400 GS.">
-<meta property="og:url" content="https://aionguide.vercel.app/">
-<meta property="og:image" content="https://aionguide.vercel.app/og-image.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#f2c14e">
-
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230d0f14' stroke='%23f2c14e' stroke-width='4'/%3E%3Cpath d='M32 12 L40 32 L32 52 L24 32 Z' fill='%23f2c14e'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta content="website" property="og:type"/>
+<meta content="Aion 2 — Guide de progression (objectif 1400 GS)" property="og:title"/>
+<meta content="Pierres d'amélioration, rifts, Daevanions, checklist : la route vers 1400 GS." property="og:description"/>
+<meta content="https://aionguide.vercel.app/" property="og:url"/>
+<meta content="https://aionguide.vercel.app/og-image.jpg" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="#f2c14e" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230d0f14' stroke='%23f2c14e' stroke-width='4'/%3E%3Cpath d='M32 12 L40 32 L32 52 L24 32 Z' fill='%23f2c14e'/%3E%3C/svg%3E" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-
 <header class="hero">
-  <div class="hero-inner">
-    <p class="eyebrow">Aion 2 · Guide de progression <span class="updated">· Mis à jour le 2 octobre 2026</span></p>
-    <h1>Objectif <span class="gold">1400 GS</span></h1>
-    <p class="lead">Tout faire pour passer 1400 de GS <strong>avant d'utiliser ses Odyles</strong>, coûte que coûte.</p>
-    <div class="alert">⚠ Le vrai goulot d'étranglement : les <strong>Pierres d'amélioration</strong>.</div>
-
-    <div class="gs-tracker">
-      <label for="gs-input">Mon GS actuel</label>
-      <div class="gs-row">
-        <input id="gs-input" type="number" min="0" max="2000" inputmode="numeric" placeholder="ex. 1291">
-        <span id="gs-left" class="gs-left">Entre ton GS pour voir ce qu'il reste</span>
-      </div>
-      <div class="gs-bar">
-        <div id="gs-fill"></div>
-        <span class="gs-mark" style="left:0%">1051</span>
-        <span class="gs-mark" style="left:42.98%">1200</span>
-        <span class="gs-mark" style="left:71.63%">1300</span>
-        <span class="gs-mark end" style="left:100%">1400</span>
-      </div>
-    </div>
-
-    <div class="progress-wrap">
-      <div class="progress-label"><span>Récap 1400 GS</span><span class="progress-text">0 / 0</span></div>
-      <div class="progress"><div class="progress-bar"></div></div>
-    </div>
-  </div>
+<div class="lang-switch" role="group" aria-label="Langue / Language / Idioma">
+<button class="lang-btn" data-lang="fr">FR</button><button class="lang-btn" data-lang="en">EN</button><button class="lang-btn" data-lang="es">ES</button>
+</div>
+<div class="hero-inner">
+<p class="eyebrow" data-i18n="t1">Aion 2 · Guide de progression <span class="updated">· Mis à jour le 2 octobre 2026</span></p>
+<h1 data-i18n="t2">Objectif <span class="gold">1400 GS</span></h1>
+<p class="lead" data-i18n="t3">Tout faire pour passer 1400 de GS <strong>avant d'utiliser ses Odyles</strong>, coûte que coûte.</p>
+<div class="alert" data-i18n="t4">⚠ Le vrai goulot d'étranglement : les <strong>Pierres d'amélioration</strong>.</div>
+<div class="gs-tracker">
+<label data-i18n="t5" for="gs-input">Mon GS actuel</label>
+<div class="gs-row">
+<input id="gs-input" inputmode="numeric" max="2000" min="0" placeholder="ex. 1291" type="number"/>
+<span class="gs-left" id="gs-left">Entre ton GS pour voir ce qu'il reste</span>
+</div>
+<div class="gs-bar">
+<div id="gs-fill"></div>
+<span class="gs-mark" style="left:0%">1051</span>
+<span class="gs-mark" style="left:42.98%">1200</span>
+<span class="gs-mark" style="left:71.63%">1300</span>
+<span class="gs-mark end" style="left:100%">1400</span>
+</div>
+</div>
+<div class="progress-wrap">
+<div class="progress-label"><span data-i18n="t6">Récap 1400 GS</span><span class="progress-text">0 / 0</span></div>
+<div class="progress"><div class="progress-bar"></div></div>
+</div>
+</div>
 </header>
-
 <nav class="toc">
-  <a href="#fil-rouge">Fil rouge</a>
-  <a href="#priorites">Priorités</a>
-  <a href="#base">1. Base</a>
-  <a href="#palier">2. Palier 1400</a>
-  <a href="#pierres">3. Pierres</a>
-  <a href="#horizontal">4. Horizontal</a>
-  <a href="#ignorer">5. Erreurs</a>
-  <a href="#routine">6. Checklists</a>
-  <a href="#glossaire">Glossaire</a>
+<a data-i18n="t7" href="#fil-rouge">Fil rouge</a>
+<a data-i18n="t8" href="#priorites">Priorités</a>
+<a data-i18n="t9" href="#base">1. Base</a>
+<a data-i18n="t10" href="#palier">2. Palier 1400</a>
+<a data-i18n="t11" href="#pierres">3. Pierres</a>
+<a data-i18n="t12" href="#horizontal">4. Horizontal</a>
+<a data-i18n="t13" href="#ignorer">5. Erreurs</a>
+<a data-i18n="t14" href="#routine">6. Checklists</a>
+<a data-i18n="t15" href="#glossaire">Glossaire</a>
 </nav>
-
 <main>
-
 <!-- Fil rouge -->
 <section id="fil-rouge">
-  <h2><span class="num">➜</span> Fil rouge : de 0 à 1400 GS</h2>
-  <p class="sub">L'ordre à suivre, étape par étape.</p>
-
-  <ol class="timeline">
-    <li class="stage">
-      <div class="stage-head"><span class="stage-tag">Étape 1</span><h3>Niveau 1 → 45</h3></div>
-      <ul class="bullets">
-        <li><strong>Quête principale</strong> en priorité.</li>
-        <li>Faire les <strong>side quests</strong> et <strong>donjons scellés</strong> qui sont sur la route.</li>
-      </ul>
-      <div class="loot">
-        <span class="loot-title">À récupérer · quête principale</span>
-      </div>
-      <div class="items">
-        <figure><img src="arc-ame.webp" alt="Arc d'âme" loading="lazy"></figure>
-        <figure><img src="garde-ame.webp" alt="Garde-âme" loading="lazy"></figure>
-        <figure><img src="bracelet-eveil.webp" alt="Bracelet de l'éveil" loading="lazy"></figure>
-      </div>
-    </li>
-
-    <li class="stage">
-      <div class="stage-head"><span class="stage-tag">Étape 2</span><h3>Niveau 45 → 1000 GS</h3></div>
-      <ul class="bullets">
-        <li>Finir <strong>toutes les side quests</strong> et <strong>tous les donjons scellés</strong> jusqu'à 1000 GS.</li>
-        <li>Monter l'<strong>amulette en jaune en priorité</strong>.</li>
-        <li>Monter la <strong>ceinture bleue au max</strong> si tu n'as pas besoin de plus.</li>
-        <li>Pierres de mana sur tout le stuff : <strong>une stat verte par pierre de mana</strong>.</li>
-      </ul>
-      <div class="loot">
-        <span class="loot-title">À récupérer · side quests</span>
-      </div>
-      <div class="items">
-        <figure><img src="bracelet-liberateur.webp" alt="Bracelet du libérateur" loading="lazy"></figure>
-        <figure><img src="anneau-liberateur.webp" alt="Anneau du libérateur" loading="lazy"></figure>
-        <figure><img src="collier-liberateur.webp" alt="Collier du libérateur" loading="lazy"></figure>
-        <figure><img src="boucles-liberateur.webp" alt="Boucles d'oreilles du libérateur" loading="lazy"></figure>
-      </div>
-    </li>
-
-    <li class="stage">
-      <div class="stage-head"><span class="stage-tag">Étape 3</span><h3>1000 → 1200 GS</h3></div>
-      <ul class="bullets">
-        <li><strong>Rift ouvert ?</strong> Go rift → donjons scellés Elyos. <a href="#pierres">Voir</a></li>
-        <li>Sinon, <strong>continuer l'exploration</strong>.</li>
-        <li>Lancer la routine : daily dungeons, Festival des Shugos, Cauchemar. <a href="#horizontal">Voir</a></li>
-      </ul>
-      <figure class="stuff-ref">
-        <img src="stuff-1200.webp" alt="Exemple de stuff à 1200 GS" loading="lazy">
-        <figcaption><strong>Stuff ≈ 1200 GS</strong><br>Très proche d'un stuff de fin de quête principale.</figcaption>
-      </figure>
-    </li>
-
-    <li class="stage goal">
-      <div class="stage-head"><span class="stage-tag">Étape 4</span><h3>1200 → 1400 GS</h3></div>
-      <ul class="bullets">
-        <li>Suivre les <a href="#palier">cibles d'amélioration</a> : arme et garde Gold +10, manastones partout.</li>
-        <li>Toutes les sources de pierres : rifts, daily dungeons, Ascension Trial.</li>
-        <li><strong>Ne pas utiliser les Odyles</strong> avant 1400.</li>
-      </ul>
-      <figure class="stuff-ref">
-        <img src="stuff-1400.webp" alt="Exemple de stuff à 1400 GS et plus" loading="lazy">
-        <figcaption><strong>Stuff 1400+ : l'objectif</strong><br>Le niveau à viser pour commencer les donjons, expéditions et la conquête.</figcaption>
-      </figure>
-    </li>
-
-    <li class="stage after">
-      <div class="stage-head"><span class="stage-tag">Ensuite</span><h3>1400+ GS</h3></div>
-      <ul class="bullets">
-        <li>Donjons, <strong>expéditions</strong> et conquête.</li>
-        <li><strong>Torse Vakra</strong> : obtenable dans l'expédition 1400+.</li>
-        <li>Odyles autorisées.</li>
-      </ul>
-    </li>
-  </ol>
+<h2 data-i18n="t16"><span class="num">➜</span> Fil rouge : de 0 à 1400 GS</h2>
+<p class="sub" data-i18n="t17">L'ordre à suivre, étape par étape.</p>
+<ol class="timeline">
+<li class="stage">
+<div class="stage-head"><span class="stage-tag" data-i18n="t18">Étape 1</span><h3 data-i18n="t19">Niveau 1 → 45</h3></div>
+<ul class="bullets">
+<li data-i18n="t20"><strong>Quête principale</strong> en priorité.</li>
+<li data-i18n="t21">Faire les <strong>side quests</strong> et <strong>donjons scellés</strong> qui sont sur la route.</li>
+</ul>
+<div class="loot">
+<span class="loot-title" data-i18n="t22">À récupérer · quête principale</span>
+</div>
+<div class="items">
+<figure><img alt="Arc d'âme" loading="lazy" src="arc-ame.webp"/></figure>
+<figure><img alt="Garde-âme" loading="lazy" src="garde-ame.webp"/></figure>
+<figure><img alt="Bracelet de l'éveil" loading="lazy" src="bracelet-eveil.webp"/></figure>
+</div>
+</li>
+<li class="stage">
+<div class="stage-head"><span class="stage-tag" data-i18n="t23">Étape 2</span><h3 data-i18n="t24">Niveau 45 → 1000 GS</h3></div>
+<ul class="bullets">
+<li data-i18n="t25">Finir <strong>toutes les side quests</strong> et <strong>tous les donjons scellés</strong> jusqu'à 1000 GS.</li>
+<li data-i18n="t26">Monter l'<strong>amulette en jaune en priorité</strong>.</li>
+<li data-i18n="t27">Monter la <strong>ceinture bleue au max</strong> si tu n'as pas besoin de plus.</li>
+<li data-i18n="t28">Pierres de mana sur tout le stuff : <strong>une stat verte par pierre de mana</strong>.</li>
+</ul>
+<div class="loot">
+<span class="loot-title" data-i18n="t29">À récupérer · side quests (niv. 43)</span>
+</div>
+<div class="items">
+<figure><img alt="Bracelet du libérateur" loading="lazy" src="bracelet-liberateur.webp"/></figure>
+<figure><img alt="Anneau du libérateur" loading="lazy" src="anneau-liberateur.webp"/></figure>
+<figure><img alt="Collier du libérateur" loading="lazy" src="collier-liberateur.webp"/></figure>
+<figure><img alt="Boucles d'oreilles du libérateur" loading="lazy" src="boucles-liberateur.webp"/></figure>
+</div>
+</li>
+<li class="stage">
+<div class="stage-head"><span class="stage-tag" data-i18n="t30">Étape 3</span><h3 data-i18n="t31">1000 → 1200 GS</h3></div>
+<ul class="bullets">
+<li data-i18n="t32"><strong>Rift ouvert ?</strong> Go rift → donjons scellés Elyos. <a href="#pierres">Voir</a></li>
+<li data-i18n="t33">Sinon, <strong>continuer l'exploration</strong>.</li>
+<li data-i18n="t34">Lancer la routine : daily dungeons, Festival des Shugos, Cauchemar. <a href="#horizontal">Voir</a></li>
+</ul>
+<figure class="stuff-ref">
+<img alt="Exemple de stuff à 1200 GS" loading="lazy" src="stuff-1200.webp"/>
+<figcaption data-i18n="t35"><strong>Stuff ≈ 1200 GS</strong><br/>Très proche d'un stuff de fin de quête principale.</figcaption>
+</figure>
+</li>
+<li class="stage goal">
+<div class="stage-head"><span class="stage-tag" data-i18n="t36">Étape 4</span><h3 data-i18n="t37">1200 → 1400 GS</h3></div>
+<ul class="bullets">
+<li data-i18n="t38">Suivre les <a href="#palier">cibles d'amélioration</a> : arme et garde Gold +10, manastones partout.</li>
+<li data-i18n="t39">Toutes les sources de pierres : rifts, daily dungeons, Ascension Trial.</li>
+<li data-i18n="t40"><strong>Ne pas utiliser les Odyles</strong> avant 1400.</li>
+</ul>
+<figure class="stuff-ref">
+<img alt="Exemple de stuff à 1400 GS et plus" loading="lazy" src="stuff-1400.webp"/>
+<figcaption data-i18n="t41"><strong>Stuff 1400+ : l'objectif</strong><br/>Le niveau à viser pour commencer les donjons, expéditions et la conquête.</figcaption>
+</figure>
+</li>
+<li class="stage after">
+<div class="stage-head"><span class="stage-tag" data-i18n="t42">Ensuite</span><h3 data-i18n="t43">1400+ GS</h3></div>
+<ul class="bullets">
+<li data-i18n="t44">Donjons, <strong>expéditions</strong> et conquête.</li>
+<li data-i18n="t45"><strong>Torse Vakra</strong> : obtenable dans l'expédition 1400+.</li>
+<li data-i18n="t46">Odyles autorisées.</li>
+</ul>
+</li>
+</ol>
 </section>
-
 <!-- Priorités -->
 <section id="priorites">
-  <h2><span class="num">★</span> Tu as 1h de jeu ? Fais ça dans l'ordre</h2>
-  <div class="tabs" role="tablist">
-    <button class="tab" data-tab="avant" role="tab">Avant 1000 GS</button>
-    <button class="tab" data-tab="apres" role="tab">Après 1000 GS</button>
-  </div>
-  <ol class="priority tabpanel" data-panel="avant">
-    <li><strong>Quêtes principales</strong> : Pierres d'amélioration. <a href="#base">Voir</a></li>
-    <li><strong>Quêtes secondaires</strong> : Skill points + Pierres d'amélioration. <a href="#base">Voir</a></li>
-    <li><strong>Donjons scellés</strong> : Daevanions + Skill points + Pierres d'amélioration. <a href="#base">Voir</a></li>
-    <li><strong>Plumes</strong> : monter le Monolith jusqu'au niveau 30. <a href="#base">Voir</a></li>
-  </ol>
-  <ol class="priority tabpanel" data-panel="apres">
-    <li><strong>Un rift est en cours ou arrive ?</strong> Riftspace → donjons scellés Elyos. C'est la plus grosse source de pierres. <a href="#pierres">Voir</a></li>
-    <li><strong>Daily dungeons de la semaine</strong> pas encore faits : buff-toi et clean tous les mobs. <a href="#pierres">Voir</a></li>
-    <li><strong>Quêtes et donjons scellés Asmo</strong> restants : Skill points + Daevanions. <a href="#base">Voir</a></li>
-    <li><strong>Festival des Shugos / Cauchemar</strong> pour acheter des Daevanions (GS gratuit). <a href="#horizontal">Voir</a></li>
-    <li><strong>Avant de déco</strong> : Saison, Pet → Genius Insight, Panthéon. <a href="#routine">Voir</a></li>
-  </ol>
+<h2 data-i18n="t47"><span class="num">★</span> Tu as 1h de jeu ? Fais ça dans l'ordre</h2>
+<div class="tabs" role="tablist">
+<button class="tab" data-i18n="t48" data-tab="avant" role="tab">Avant 1000 GS</button>
+<button class="tab" data-i18n="t49" data-tab="apres" role="tab">Après 1000 GS</button>
+</div>
+<ol class="priority tabpanel" data-panel="avant">
+<li data-i18n="t50"><strong>Quêtes principales</strong> : Pierres d'amélioration. <a href="#base">Voir</a></li>
+<li data-i18n="t51"><strong>Quêtes secondaires</strong> : Skill points + Pierres d'amélioration. <a href="#base">Voir</a></li>
+<li data-i18n="t52"><strong>Donjons scellés</strong> : Daevanions + Skill points + Pierres d'amélioration. <a href="#base">Voir</a></li>
+<li data-i18n="t53"><strong>Plumes</strong> : monter le Monolith jusqu'au niveau 30. <a href="#base">Voir</a></li>
+</ol>
+<ol class="priority tabpanel" data-panel="apres">
+<li data-i18n="t54"><strong>Un rift est en cours ou arrive ?</strong> Riftspace → donjons scellés Elyos. C'est la plus grosse source de pierres. <a href="#pierres">Voir</a></li>
+<li data-i18n="t55"><strong>Daily dungeons de la semaine</strong> pas encore faits : buff-toi et clean tous les mobs. <a href="#pierres">Voir</a></li>
+<li data-i18n="t56"><strong>Quêtes et donjons scellés Asmo</strong> restants : Skill points + Daevanions. <a href="#base">Voir</a></li>
+<li data-i18n="t57"><strong>Festival des Shugos / Cauchemar</strong> pour acheter des Daevanions (GS gratuit). <a href="#horizontal">Voir</a></li>
+<li data-i18n="t58"><strong>Avant de déco</strong> : Saison, Pet → Genius Insight, Panthéon. <a href="#routine">Voir</a></li>
+</ol>
 </section>
-
 <!-- 1 -->
 <section id="base">
-  <h2><span class="num">1</span> Progression de base</h2>
-  <p class="sub">À faire intégralement.</p>
-  <div class="grid">
-    <article class="card">
-      <img src="quete-principale.webp" alt="Quête principale" class="shot wide" loading="lazy">
-      <h3>Quêtes principales</h3>
-      <p>Toutes, intégralement. Donnent aussi des <strong>Pierres d'amélioration</strong>.</p>
-    </article>
-    <article class="card">
-      <img src="quete-secondaire.webp" alt="Icône quête secondaire" class="icon" loading="lazy">
-      <h3>Quêtes secondaires</h3>
-      <p>Toutes les quêtes vertes : <strong>Skill points</strong> + <strong>Pierres d'amélioration</strong>.</p>
-    </article>
-    <article class="card">
-      <img src="donjon-scelle.webp" alt="Icône donjon scellé" class="icon" loading="lazy">
-      <h3>Donjons scellés Asmo</h3>
-      <p><strong>TOUS</strong> finis → Daevanions + Skill points + <strong>Pierres d'amélioration</strong>.</p>
-    </article>
-    <article class="card">
-      <img src="monolith.webp" alt="Monolith terminé" class="icon" loading="lazy">
-      <h3>Plumes → Monolith 30</h3>
-      <p>Monter le Monolith au niveau 30, puis arrêter.</p>
-    </article>
-  </div>
-  <ul class="bullets">
-    <li>Runes : <strong>+2 maximum</strong>. Au-delà, elles peuvent <strong>se briser en cas d'échec</strong> : ne monte plus haut que si tu en as en surplus.</li>
-    <li>Duty quest : <em>à vérifier</em>.</li>
-  </ul>
-
-  <h3 class="h3">Amulette &amp; ceinture : Vert → Bleu → Jaune</h3>
-  <p class="sub">À monter au fil de la progression principale, avant d'arriver à 1000 GS.</p>
-  <p class="row-label">Amulette</p>
-  <div class="rarity">
-    <figure class="r-rare"><img src="amulette-rare.webp" alt="Amulette Rare" loading="lazy"><figcaption>Vert · Rare</figcaption></figure>
-    <figure class="r-epic"><img src="amulette-epique.webp" alt="Amulette Épique" loading="lazy"><figcaption>Bleu · Épique</figcaption></figure>
-    <figure class="r-unique"><img src="amulette-unique.webp" alt="Amulette Unique" loading="lazy"><figcaption>Jaune · Unique (« Gold ») ✔ cible</figcaption></figure>
-  </div>
-  <p class="row-label">Ceinture</p>
-  <div class="rarity">
-    <figure class="r-rare"><img src="ceinture-rare.webp" alt="Ceinture Rare" loading="lazy"><figcaption>Vert · Rare</figcaption></figure>
-    <figure class="r-epic"><img src="ceinture-epique.webp" alt="Ceinture Épique" loading="lazy"><figcaption>Bleu · Épique</figcaption></figure>
-    <figure class="r-unique"><img src="ceinture-unique.webp" alt="Ceinture Unique" loading="lazy"><figcaption>Jaune · Unique (« Gold ») ✔ cible</figcaption></figure>
-  </div>
-  <div class="upgrade-path">
-    <span class="step s-rare">Vert</span><span class="arrow">+10 →</span>
-    <span class="step s-epic">Bleu</span><span class="arrow">+10 →</span>
-    <span class="step s-unique">Jaune (Gold)</span>
-  </div>
-  <p class="note">Monter la pièce verte à <strong>+10</strong> pour la passer en bleue, puis la bleue à <strong>+10</strong> pour la passer en jaune (Gold).</p>
+<h2 data-i18n="t59"><span class="num">1</span> Progression de base</h2>
+<p class="sub" data-i18n="t60">À faire intégralement.</p>
+<div class="grid">
+<article class="card">
+<img alt="Quête principale" class="shot wide" loading="lazy" src="quete-principale.webp"/>
+<h3 data-i18n="t61">Quêtes principales</h3>
+<p data-i18n="t62">Toutes, intégralement. Donnent aussi des <strong>Pierres d'amélioration</strong>.</p>
+</article>
+<article class="card">
+<img alt="Icône quête secondaire" class="icon" loading="lazy" src="quete-secondaire.webp"/>
+<h3 data-i18n="t63">Quêtes secondaires</h3>
+<p data-i18n="t64">Toutes les quêtes vertes : <strong>Skill points</strong> + <strong>Pierres d'amélioration</strong>.</p>
+</article>
+<article class="card">
+<img alt="Icône donjon scellé" class="icon" loading="lazy" src="donjon-scelle.webp"/>
+<h3 data-i18n="t65">Donjons scellés Asmo</h3>
+<p data-i18n="t66"><strong>TOUS</strong> finis → Daevanions + Skill points + <strong>Pierres d'amélioration</strong>.</p>
+</article>
+<article class="card">
+<img alt="Monolith terminé" class="icon" loading="lazy" src="monolith.webp"/>
+<h3 data-i18n="t67">Plumes → Monolith 30</h3>
+<p data-i18n="t68">Monter le Monolith au niveau 30, puis arrêter.</p>
+</article>
+</div>
+<ul class="bullets">
+<li data-i18n="t69">Runes : <strong>+2 maximum</strong>. Au-delà, elles peuvent <strong>se briser en cas d'échec</strong> : ne monte plus haut que si tu en as en surplus.</li>
+<li data-i18n="t70">Duty quest : <em>à vérifier</em>.</li>
+</ul>
+<h3 class="h3" data-i18n="t71">Amulette &amp; ceinture : Vert → Bleu → Jaune</h3>
+<p class="sub" data-i18n="t72">À monter au fil de la progression principale, avant d'arriver à 1000 GS.</p>
+<p class="row-label" data-i18n="t73">Amulette</p>
+<div class="rarity">
+<figure class="r-rare"><img alt="Amulette Rare" loading="lazy" src="amulette-rare.webp"/><figcaption data-i18n="t74">Vert · Rare</figcaption></figure>
+<figure class="r-epic"><img alt="Amulette Épique" loading="lazy" src="amulette-epique.webp"/><figcaption data-i18n="t75">Bleu · Épique</figcaption></figure>
+<figure class="r-unique"><img alt="Amulette Unique" loading="lazy" src="amulette-unique.webp"/><figcaption data-i18n="t76">Jaune · Unique (« Gold ») ✔ cible</figcaption></figure>
+</div>
+<p class="row-label" data-i18n="t77">Ceinture</p>
+<div class="rarity">
+<figure class="r-rare"><img alt="Ceinture Rare" loading="lazy" src="ceinture-rare.webp"/><figcaption>Vert · Rare</figcaption></figure>
+<figure class="r-epic"><img alt="Ceinture Épique" loading="lazy" src="ceinture-epique.webp"/><figcaption>Bleu · Épique</figcaption></figure>
+<figure class="r-unique"><img alt="Ceinture Unique" loading="lazy" src="ceinture-unique.webp"/><figcaption>Jaune · Unique (« Gold ») ✔ cible</figcaption></figure>
+</div>
+<div class="upgrade-path">
+<span class="step s-rare" data-i18n="t78">Vert</span><span class="arrow">+10 →</span>
+<span class="step s-epic" data-i18n="t79">Bleu</span><span class="arrow">+10 →</span>
+<span class="step s-unique" data-i18n="t80">Jaune (Gold)</span>
+</div>
+<p class="note" data-i18n="t81">Monter la pièce verte à <strong>+10</strong> pour la passer en bleue, puis la bleue à <strong>+10</strong> pour la passer en jaune (Gold).</p>
+<div class="transmuter">
+<img alt="Transmuter" class="shot" loading="lazy" src="transmuter.webp"/>
+<p data-i18n="t175">Le <strong>Transmuter</strong> sert à passer la pièce à +10 à la qualité supérieure. Raccourci : <kbd>Alt</kbd> + <kbd>H</kbd>, ou via le menu avec <kbd>Échap</kbd>.</p>
+</div>
 </section>
-
 <!-- 2 -->
 <section id="palier">
-  <h2><span class="num">2</span> Palier 1051 → 1400 GS</h2>
-
-  <h3 class="h3">Cibles d'amélioration</h3>
-  <div class="targets">
-    <div class="target"><span class="tag gold-bg">Gold +10</span>Arme principale &amp; Garde</div>
-    <div class="target"><span class="tag gold-bg">Gold +0</span>Amulette &amp; Ceinture</div>
-    <div class="target"><span class="tag">≈ +5</span>Accessoires &amp; armure</div>
-    <div class="target"><span class="tag">100 %</span>Manastones sur tout le gear</div>
-    <div class="target"><span class="tag dim">Optionnel</span>Theostones si tu en as (à éviter, mais mets-les)</div>
-  </div>
-
-  <div class="split">
-    <figure class="shot-fig"><img src="arme-10.webp" alt="Arme +10 avec emplacements de Pierres de mana" loading="lazy"><figcaption>Arme +10 Gold et ses emplacements de Pierres de mana</figcaption></figure>
-    <div>
-      <figure class="shot-fig"><img src="pierres-de-mana.webp" alt="Emplacements de Pierres de mana" loading="lazy"><figcaption>Remplir <strong>tous</strong> les emplacements de Pierres de mana</figcaption></figure>
-    </div>
-  </div>
+<h2 data-i18n="t82"><span class="num">2</span> Palier 1051 → 1400 GS</h2>
+<h3 class="h3" data-i18n="t83">Cibles d'amélioration</h3>
+<div class="targets">
+<div class="target" data-i18n="t84"><span class="tag gold-bg">Gold +10</span>Arme principale &amp; Garde</div>
+<div class="target" data-i18n="t85"><span class="tag gold-bg">Gold +0</span>Amulette &amp; Ceinture</div>
+<div class="target" data-i18n="t86"><span class="tag">≈ +5</span>Accessoires &amp; armure</div>
+<div class="target" data-i18n="t87"><span class="tag">100 %</span>Manastones sur tout le gear</div>
+<div class="target" data-i18n="t88"><span class="tag dim">Optionnel</span>Theostones si tu en as (à éviter, mais mets-les)</div>
+</div>
+<div class="split">
+<figure class="shot-fig"><img alt="Arme +10 avec emplacements de Pierres de mana" loading="lazy" src="arme-10.webp"/><figcaption data-i18n="t89">Arme +10 Gold et ses emplacements de Pierres de mana</figcaption></figure>
+<div>
+<figure class="shot-fig"><img alt="Emplacements de Pierres de mana" loading="lazy" src="pierres-de-mana.webp"/><figcaption data-i18n="t90">Remplir <strong>tous</strong> les emplacements de Pierres de mana</figcaption></figure>
+</div>
+</div>
 </section>
-
 <!-- 3 -->
 <section id="pierres">
-  <h2><span class="num">3</span> Pierres d'amélioration</h2>
-  <img src="pierre-amelioration.webp" alt="Pierre d'amélioration" class="shot center" loading="lazy">
-
-  <div class="rift">
-    <div>
-      <h3>Prochain rift</h3>
-      <p class="rift-hours">2h · 5h · 8h · 11h <small>(am &amp; pm)</small></p>
-      <button id="notif-btn" class="notif-btn">🔔 Me prévenir 5 min avant</button>
-      <p id="notif-hint" class="notif-hint"></p>
-    </div>
-    <div class="countdown"><span id="rift-next">--:--</span><small id="rift-in">dans --</small></div>
-  </div>
-
-  <div class="grid">
-    <article class="card">
-      <h3>Rifts → seals Elyos</h3>
-      <ul class="bullets">
-        <li>À l'heure du rift : Riftspace → côté Elyos.</li>
-        <li><strong>UNIQUEMENT</strong> leurs donjons scellés (≈ 2 500 pierres / donjon), pas les bastions.</li>
-        <li>≈ 2 rotations, à faire très vite.</li>
-      </ul>
-    </article>
-    <article class="card">
-      <h3>Daily dungeons (14)</h3>
-      <ul class="bullets">
-        <li>En réalité <strong>hebdomadaires</strong>.</li>
-        <li>Plus tu tues de mobs, plus tu gagnes : <strong>buff-toi avant</strong>.</li>
-        <li>Avec l'abonnement : shop pour des runs en plus.</li>
-      </ul>
-    </article>
-    <article class="card">
-      <h3>Ascension Trial</h3>
-      <p>À faire.</p>
-    </article>
-    <article class="card">
-      <h3>Quêtes &amp; donjons scellés</h3>
-      <ul class="bullets">
-        <li>Quêtes <strong>principales</strong> et <strong>secondaires</strong> : donnent des pierres.</li>
-        <li><strong>Donjons scellés</strong> : donnent aussi des pierres.</li>
-      </ul>
-    </article>
-  </div>
+<h2 data-i18n="t91"><span class="num">3</span> Pierres d'amélioration</h2>
+<img alt="Pierre d'amélioration" class="shot center" loading="lazy" src="pierre-amelioration.webp"/>
+<div class="rift">
+<div>
+<h3 data-i18n="t92">Prochain rift</h3>
+<p class="rift-hours" data-i18n="t93">2h · 5h · 8h · 11h <small>(am &amp; pm)</small></p>
+<button class="notif-btn" id="notif-btn">🔔 Me prévenir 5 min avant</button>
+<p class="notif-hint" id="notif-hint"></p>
+</div>
+<div class="countdown"><span id="rift-next">--:--</span><small id="rift-in">dans --</small></div>
+</div>
+<div class="grid">
+<article class="card">
+<h3 data-i18n="t94">Rifts → seals Elyos</h3>
+<ul class="bullets">
+<li data-i18n="t95">À l'heure du rift : Riftspace → côté Elyos.</li>
+<li data-i18n="t96"><strong>UNIQUEMENT</strong> leurs donjons scellés (≈ 2 500 pierres / donjon), pas les bastions.</li>
+<li data-i18n="t97">≈ 2 rotations, à faire très vite.</li>
+</ul>
+</article>
+<article class="card">
+<h3 data-i18n="t98">Daily dungeons (14)</h3>
+<ul class="bullets">
+<li data-i18n="t99">En réalité <strong>hebdomadaires</strong>.</li>
+<li data-i18n="t100">Plus tu tues de mobs, plus tu gagnes : <strong>buff-toi avant</strong>.</li>
+<li data-i18n="t101">Avec l'abonnement : shop pour des runs en plus.</li>
+</ul>
+</article>
+<article class="card">
+<h3 data-i18n="t102">Ascension Trial</h3>
+<p data-i18n="t103">À faire.</p>
+</article>
+<article class="card">
+<h3 data-i18n="t104">Quêtes &amp; donjons scellés</h3>
+<ul class="bullets">
+<li data-i18n="t105">Quêtes <strong>principales</strong> et <strong>secondaires</strong> : donnent des pierres.</li>
+<li data-i18n="t106"><strong>Donjons scellés</strong> : donnent aussi des pierres.</li>
+</ul>
+</article>
+</div>
 </section>
-
 <!-- 4 -->
 <section id="horizontal">
-  <h2><span class="num">4</span> Gear horizontal</h2>
-  <p class="sub">Progression lente, GS gratuit via les Daevanions.</p>
-  <div class="grid">
-    <article class="card">
-      <img src="festival-shugos.webp" alt="Festival des Shugos" class="shot" loading="lazy">
-      <h3>Festival des Shugos</h3>
-      <p>À faire en masse → achat de Daevanions.</p>
-    </article>
-    <article class="card">
-      <img src="cauchemar.webp" alt="Cauchemar" class="shot" loading="lazy">
-      <h3>Cauchemar</h3>
-      <p>Stage 1, puis 2, puis… → achat de Daevanions.</p>
-    </article>
-    <article class="card">
-      <img src="daevanion.webp" alt="Compteur de Daevanions" class="shot" loading="lazy">
-      <h3>Daevanions</h3>
-      <p>Le compteur (ex. 6/264). Chaque Daevanion = du GS gratuit.</p>
-    </article>
-  </div>
-  <ul class="bullets">
-    <li><strong>Shops</strong> : priorité Daevanion ET Stigma shard. Conseil : Daevanion en premier.</li>
-    <li><strong>Abyssal Feather</strong> : important pour les Daevanions PvP (+1 GS par Daevanion).</li>
-  </ul>
+<h2 data-i18n="t107"><span class="num">4</span> Gear horizontal</h2>
+<p class="sub" data-i18n="t108">Progression lente, GS gratuit via les Daevanions.</p>
+<div class="grid">
+<article class="card">
+<img alt="Festival des Shugos" class="shot" loading="lazy" src="festival-shugos.webp"/>
+<h3 data-i18n="t109">Festival des Shugos</h3>
+<p data-i18n="t110">À faire en masse → achat de Daevanions.</p>
+</article>
+<article class="card">
+<img alt="Cauchemar" class="shot" loading="lazy" src="cauchemar.webp"/>
+<h3 data-i18n="t111">Cauchemar</h3>
+<p data-i18n="t112">Stage 1, puis 2, puis… → achat de Daevanions.</p>
+</article>
+<article class="card">
+<img alt="Compteur de Daevanions" class="shot" loading="lazy" src="daevanion.webp"/>
+<h3 data-i18n="t113">Daevanions</h3>
+<p data-i18n="t114">Le compteur (ex. 6/264). Chaque Daevanion = du GS gratuit.</p>
+</article>
+</div>
+<ul class="bullets">
+<li data-i18n="t115"><strong>Shops</strong> : priorité Daevanion ET Stigma shard. Conseil : Daevanion en premier.</li>
+<li data-i18n="t116"><strong>Abyssal Feather</strong> : important pour les Daevanions PvP (+1 GS par Daevanion).</li>
+</ul>
 </section>
-
 <!-- 5 -->
 <section id="ignorer">
-  <h2><span class="num">5</span> Erreurs à éviter</h2>
-  <div class="errors">
-    <div class="error"><span>✕</span><p><strong>Utiliser ses Odyles avant 1400 GS.</strong> On les garde, coûte que coûte.</p></div>
-    <div class="error"><span>✕</span><p><strong>Farmer les plumes au-delà du Monolith 30</strong> : totalement inutile pour l'instant.</p></div>
-    <div class="error"><span>✕</span><p><strong>Monter les runes au-delà de +2 sans en avoir en surplus</strong> : elles peuvent se briser en cas d'échec.</p></div>
-    <div class="error"><span>✕</span><p><strong>Faire les bastions côté Elyos pendant le rift</strong> : seulement les donjons scellés.</p></div>
-    <div class="error"><span>✕</span><p><strong>Lancer les daily dungeons sans buff</strong> : moins de mobs tués = moins de pierres.</p></div>
-    <div class="error"><span>✕</span><p><strong>Laisser des emplacements de Pierres de mana vides.</strong></p></div>
-  </div>
-  <h3 class="h3">À ignorer</h3>
-  <div class="grid">
-    <article class="card muted">
-      <img src="bastion.webp" alt="Icône bastion" class="icon" loading="lazy">
-      <h3>Bastions</h3>
-      <p>On dodge, aucun intérêt.</p>
-    </article>
-    <article class="card muted">
-      <h3>Plumes normales</h3>
-      <p>Inutiles au-delà du Monolith 30 (pour l'instant).</p>
-    </article>
-    <article class="card muted">
-      <h3>Grind aux Abysses</h3>
-      <p>Très compliqué (campé par des rangers), pas rentable.</p>
-    </article>
-  </div>
+<h2 data-i18n="t117"><span class="num">5</span> Erreurs à éviter</h2>
+<div class="errors">
+<div class="error"><span>✕</span><p data-i18n="t118"><strong>Utiliser ses Odyles avant 1400 GS.</strong> On les garde, coûte que coûte.</p></div>
+<div class="error"><span>✕</span><p data-i18n="t119"><strong>Farmer les plumes au-delà du Monolith 30</strong> : totalement inutile pour l'instant.</p></div>
+<div class="error"><span>✕</span><p data-i18n="t120"><strong>Monter les runes au-delà de +2 sans en avoir en surplus</strong> : elles peuvent se briser en cas d'échec.</p></div>
+<div class="error"><span>✕</span><p data-i18n="t121"><strong>Faire les bastions côté Elyos pendant le rift</strong> : seulement les donjons scellés.</p></div>
+<div class="error"><span>✕</span><p data-i18n="t122"><strong>Lancer les daily dungeons sans buff</strong> : moins de mobs tués = moins de pierres.</p></div>
+<div class="error"><span>✕</span><p data-i18n="t123"><strong>Laisser des emplacements de Pierres de mana vides.</strong></p></div>
+</div>
+<h3 class="h3" data-i18n="t124">À ignorer</h3>
+<div class="grid">
+<article class="card muted">
+<img alt="Icône bastion" class="icon" loading="lazy" src="bastion.webp"/>
+<h3 data-i18n="t125">Bastions</h3>
+<p data-i18n="t126">On dodge, aucun intérêt.</p>
+</article>
+<article class="card muted">
+<h3 data-i18n="t127">Plumes normales</h3>
+<p data-i18n="t128">Inutiles au-delà du Monolith 30 (pour l'instant).</p>
+</article>
+<article class="card muted">
+<h3 data-i18n="t129">Grind aux Abysses</h3>
+<p data-i18n="t130">Très compliqué (campé par des rangers), pas rentable.</p>
+</article>
+</div>
 </section>
-
 <!-- 6 -->
 <section id="routine">
-  <h2><span class="num">6</span> Checklists</h2>
-  <p class="sub">Cochées dans ton navigateur. La quotidienne se vide toute seule au reset du jour, l'hebdo au reset du mercredi.</p>
-  <div class="checklists three">
-    <div>
-      <h3 class="h3">Quotidien <small class="reset-in" data-for="daily"></small></h3>
-      <ul class="check" data-group="daily" data-reset="daily">
-        <li>Au moins un rift → seals Elyos</li>
-        <li>Menu « Saison » : missions + toutes les récompenses</li>
-        <li>Pet → Genius Insight (2e onglet) : analyser chaque cercle</li>
-        <li>Panthéon : vérifier que tout est appliqué</li>
-      </ul>
-    </div>
-    <div>
-      <h3 class="h3">Hebdo <small class="reset-in" data-for="weekly"></small></h3>
-      <ul class="check" data-group="weekly" data-reset="weekly">
-        <li>Daily dungeons (les 14) faits, buff actif</li>
-      </ul>
-    </div>
-    <div>
-      <h3 class="h3">Récap 1400 GS</h3>
-      <div class="progress-wrap inline">
-        <div class="progress-label"><span>Progression</span><span class="progress-text">0 / 0</span></div>
-        <div class="progress"><div class="progress-bar"></div></div>
-      </div>
-      <ul class="check" data-group="recap">
-        <li>Main quests intégrales</li>
-        <li>Side quests intégrales</li>
-        <li>Runes +2</li>
-        <li>Monolith plumes niv. 30</li>
-        <li>Tous les donjons scellés Asmo</li>
-        <li>Arme + Garde Gold +10</li>
-        <li>Amulette + Ceinture Gold +0</li>
-        <li>Accessoires + armure ≈ +5</li>
-        <li>Manastones sur tout le gear</li>
-        <li>Ascension Trial</li>
-        <li>Festival des Shugos / Cauchemar → Daevanions</li>
-        <li>1400 GS atteints → Odyles autorisées</li>
-      </ul>
-      <button id="reset" class="reset">Réinitialiser le récap</button>
-    </div>
-  </div>
+<h2 data-i18n="t131"><span class="num">6</span> Checklists</h2>
+<p class="sub" data-i18n="t132">Cochées dans ton navigateur. La quotidienne se vide toute seule au reset du jour, l'hebdo au reset du mercredi.</p>
+<div class="checklists three">
+<div>
+<h3 class="h3" data-i18n="t133">Quotidien <small class="reset-in" data-for="daily"></small></h3>
+<ul class="check" data-group="daily" data-reset="daily">
+<li data-i18n="t134">Au moins un rift → seals Elyos</li>
+<li data-i18n="t135">Menu « Saison » : missions + toutes les récompenses</li>
+<li data-i18n="t136">Pet → Genius Insight (2e onglet) : analyser chaque cercle</li>
+<li data-i18n="t137">Panthéon : vérifier que tout est appliqué</li>
+</ul>
+</div>
+<div>
+<h3 class="h3" data-i18n="t138">Hebdo <small class="reset-in" data-for="weekly"></small></h3>
+<ul class="check" data-group="weekly" data-reset="weekly">
+<li data-i18n="t139">Daily dungeons (les 14) faits, buff actif</li>
+</ul>
+</div>
+<div>
+<h3 class="h3" data-i18n="t140">Récap 1400 GS</h3>
+<div class="progress-wrap inline">
+<div class="progress-label"><span data-i18n="t141">Progression</span><span class="progress-text">0 / 0</span></div>
+<div class="progress"><div class="progress-bar"></div></div>
+</div>
+<ul class="check" data-group="recap">
+<li data-i18n="t142">Main quests intégrales</li>
+<li data-i18n="t143">Side quests intégrales</li>
+<li data-i18n="t144">Runes +2</li>
+<li data-i18n="t145">Monolith plumes niv. 30</li>
+<li data-i18n="t146">Tous les donjons scellés Asmo</li>
+<li data-i18n="t147">Arme + Garde Gold +10</li>
+<li data-i18n="t148">Amulette + Ceinture Gold +0</li>
+<li data-i18n="t149">Accessoires + armure ≈ +5</li>
+<li data-i18n="t150">Manastones sur tout le gear</li>
+<li data-i18n="t151">Ascension Trial</li>
+<li data-i18n="t152">Festival des Shugos / Cauchemar → Daevanions</li>
+<li data-i18n="t153">1400 GS atteints → Odyles autorisées</li>
+</ul>
+<button class="reset" data-i18n="t154" id="reset">Réinitialiser le récap</button>
+</div>
+</div>
 </section>
-
 <!-- Glossaire -->
 <section id="glossaire">
-  <h2><span class="num">?</span> Glossaire</h2>
-  <dl class="glossary">
-    <div><dt>GS</dt><dd>Gear Score, le score d'équipement. L'objectif du guide : 1400.</dd></div>
-    <div><dt>Pierre d'amélioration</dt><dd>Sert à monter le niveau d'amélioration (+X) du stuff. La ressource la plus limitante.</dd></div>
-    <div><dt>Pierre de mana (Manastone)</dt><dd>Se place dans les emplacements de chaque pièce d'équipement.</dd></div>
-    <div><dt>Daevanion</dt><dd>Chaque Daevanion débloqué donne du GS. S'achète via le Festival des Shugos et le Cauchemar.</dd></div>
-    <div><dt>Odyle</dt><dd>À garder jusqu'à 1400 GS, ne pas les utiliser avant.</dd></div>
-    <div><dt>Donjon scellé (seal)</dt><dd>Donjons à finir côté Asmo, et à farmer côté Elyos pendant les rifts.</dd></div>
-    <div><dt>Rift / Riftspace</dt><dd>Passage vers le territoire Elyos, ouvert à heures fixes (2h, 5h, 8h, 11h am &amp; pm).</dd></div>
-    <div><dt>Asmo / Elyos</dt><dd>Les deux factions du jeu.</dd></div>
-    <div><dt>Stigma shard</dt><dd>À acheter en shop, en priorité avec les Daevanions.</dd></div>
-  </dl>
+<h2 data-i18n="t155"><span class="num">?</span> Glossaire</h2>
+<dl class="glossary">
+<div><dt data-i18n="t156">GS</dt><dd data-i18n="t157">Gear Score, le score d'équipement. L'objectif du guide : 1400.</dd></div>
+<div><dt data-i18n="t158">Pierre d'amélioration</dt><dd data-i18n="t159">Sert à monter le niveau d'amélioration (+X) du stuff. La ressource la plus limitante.</dd></div>
+<div><dt data-i18n="t160">Pierre de mana (Manastone)</dt><dd data-i18n="t161">Se place dans les emplacements de chaque pièce d'équipement.</dd></div>
+<div><dt data-i18n="t162">Daevanion</dt><dd data-i18n="t163">Chaque Daevanion débloqué donne du GS. S'achète via le Festival des Shugos et le Cauchemar.</dd></div>
+<div><dt data-i18n="t164">Odyle</dt><dd data-i18n="t165">À garder jusqu'à 1400 GS, ne pas les utiliser avant.</dd></div>
+<div><dt data-i18n="t166">Donjon scellé (seal)</dt><dd data-i18n="t167">Donjons à finir côté Asmo, et à farmer côté Elyos pendant les rifts.</dd></div>
+<div><dt data-i18n="t168">Rift / Riftspace</dt><dd data-i18n="t169">Passage vers le territoire Elyos, ouvert à heures fixes (2h, 5h, 8h, 11h am &amp; pm).</dd></div>
+<div><dt data-i18n="t170">Asmo / Elyos</dt><dd data-i18n="t171">Les deux factions du jeu.</dd></div>
+<div><dt data-i18n="t172">Stigma shard</dt><dd data-i18n="t173">À acheter en shop, en priorité avec les Daevanions.</dd></div>
+</dl>
 </section>
-
 </main>
-
-<button id="to-top" class="to-top" aria-label="Remonter en haut">↑</button>
-<div id="lightbox" class="lightbox" hidden><img alt=""></div>
-<footer>Guide perso · Aion 2 · Mis à jour le 2 octobre 2026</footer>
+<button aria-label="Remonter en haut" class="to-top" id="to-top">↑</button>
+<div class="lightbox" hidden="" id="lightbox"><img alt=""/></div>
+<footer data-i18n="t174">Guide perso · Aion 2 · Mis à jour le 2 octobre 2026</footer>
+<script src="i18n.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
