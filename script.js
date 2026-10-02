@@ -56,3 +56,8 @@ const obs = new IntersectionObserver(entries => entries.forEach(e => {
   if (e.isIntersecting) links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
 }), { rootMargin: '-40% 0px -55% 0px' });
 document.querySelectorAll('section').forEach(s => obs.observe(s));
+
+// Bouton remonter en haut
+const toTop = document.getElementById('to-top');
+window.addEventListener('scroll', () => toTop.classList.toggle('show', window.scrollY > 500), { passive: true });
+toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
