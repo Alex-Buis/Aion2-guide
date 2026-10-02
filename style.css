@@ -189,3 +189,9 @@ footer{text-align:center;color:var(--dim);padding:32px;font-size:.85rem}
 .stuff-ref{display:flex;gap:16px;align-items:flex-start;margin:16px 0 0}
 .stuff-ref img{width:120px;border-radius:8px;border:1px solid var(--line);cursor:zoom-in;flex-shrink:0}
 .stuff-ref figcaption{color:var(--dim);font-size:.9rem}
+
+/* Objets à récupérer (fil rouge) */
+.items{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;margin-top:10px}
+.items figure{margin:0}
+.items img{width:100%;border-radius:8px;border:1px solid var(--line);cursor:zoom-in}
+.items figcaption{font-size:.8rem;color:var(--dim);margin-top:6px}
