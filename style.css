@@ -216,3 +216,8 @@ kbd{display:inline-block;font:700 .8rem Inter;color:var(--text);background:var(-
   .toc{justify-content:flex-start}
   .lang-switch.in-nav{position:sticky;right:0;top:auto;transform:none;margin-left:auto;box-shadow:-18px 0 14px var(--bg),18px 0 0 12px var(--bg)}
 }
+
+/* Puissance de combat (fil rouge) */
+.combat{margin:6px 0 0 34px;background:linear-gradient(135deg,#2a1620,var(--panel));border:1px solid #ff5d5d55;border-radius:14px;padding:18px 20px}
+.combat h3{margin:0;font-size:1.1rem}
+.combat .bullets{margin:10px 0 0}
